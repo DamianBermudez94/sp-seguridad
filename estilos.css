@@ -1,0 +1,622 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+.header {
+  overflow: hidden;
+}
+/*--- Menu ---*/
+.contenedor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 10px;
+}
+.img-title {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+}
+.btn-menu {
+  font-size: 20px;
+  border-radius: 4px;
+  padding: 10px;
+  color: #fff;
+  background-color: rgb(77, 77, 77);
+}
+.menu {
+  position: absolute;
+  top: 75px;
+  left: -100%;
+  width: 100%;
+  height: calc(100vh - 60px);
+  background-color: rgba(20, 161, 104, 0.7);
+}
+.menu-contenedor {
+  margin: auto 10px;
+  flex-direction: column;
+  font-size: 18px;
+}
+.menu-link {
+  width: 100%;
+  margin: 20px auto;
+  color: rgb(255, 255, 255);
+  border-bottom: 2px solid;
+}
+.link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.header-welcome {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./imagenes/logo-sp-seguridad.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.welcome {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.4);
+}
+.welcome-title {
+  font-size: 45px;
+  text-align: center;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 30px;
+  margin-bottom: 50px;
+}
+.btn-welcome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.btn-quienes-somos {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 19px;
+  background-color: rgb(233, 102, 86);
+  padding: 10px 10px;
+  margin: 15px 0;
+  transition: 0.3s;
+}
+.btn-cotizaciones {
+  font-size: 19px;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: rgb(30, 158, 107);
+  border-radius: 4px;
+  transition: 0.3s;
+}
+@media (min-width: 960px) {
+  .menu {
+    position: absolute;
+    top: 25px;
+    left: 30%;
+    width: 70%;
+    height: 30%;
+    margin: 0 auto;
+    background-color: unset;
+  }
+  .menu-contenedor {
+    width: 80%;
+    height: 10%;
+    flex-direction: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right;
+    font-size: 18px;
+    margin: 0;
+  }
+  .menu-link {
+    width: unset;
+    margin: auto 10px;
+    overflow: auto;
+    transition: all 0.6s;
+  }
+  .menu-link:hover {
+    border-bottom: 2px solid rgb(45, 80, 133);
+  }
+  .link {
+    color: rgb(45, 80, 133);
+  }
+
+  .btn-menu {
+    display: none;
+  }
+  .btn-welcome {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+  }
+  .btn-cotizaciones {
+    margin: 15px;
+  }
+  .btn-quienes-somos:hover {
+    background-color: rgb(209, 64, 45);
+  }
+  .btn-cotizaciones:hover {
+    background-color: rgb(14, 116, 75);
+  }
+}
+
+/*---Servicios----*/
+
+.contenedor-servicios {
+  margin: 30px auto;
+}
+
+.servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px;
+  text-align: center;
+}
+
+.servicios-title {
+  padding: 15px;
+  font-size: 45px;
+  text-align: center;
+  color: rgb(64, 64, 64);
+}
+.img-servicios {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 8px solid rgba(141, 141, 141, 0.281);
+}
+.servicios-parrafos {
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+  font-family: "Lato", sans-serif;
+  color: rgb(64, 64, 64);
+  padding: 5px;
+}
+
+.municipio {
+  background-color: rgb(233, 102, 86);
+  max-width: 35%;
+  border: none;
+  height: 4px;
+  margin: 0 auto;
+}
+.camaras {
+  background-color: rgb(52, 210, 147);
+  max-width: 30%;
+  height: 4px;
+  border: none;
+  margin: 0 auto;
+}
+.vecinal {
+  background-color: rgb(58, 176, 226);
+  width: 29%;
+  height: 4px;
+  border: none;
+  margin: 0 auto;
+}
+.control {
+  background-color: rgb(247, 216, 97);
+  max-width: 30%;
+  height: 4px;
+  border: none;
+  margin: 0 auto;
+}
+.alarmas {
+  background-color: rgb(233, 102, 86);
+  max-width: 20%;
+  height: 4px;
+  border: none;
+  margin: 0 auto;
+}
+.covid {
+  background-color: rgb(52, 210, 147);
+  max-width: 40%;
+  height: 4px;
+  border: none;
+  margin: 0 auto;
+}
+
+/* --- Responsive Servicios ---*/
+
+@media (min-width: 960px) {
+  .img-servicios {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 8px solid rgba(141, 141, 141, 0.281);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .municipio-circle:hover {
+    border: 8px solid rgb(233, 102, 86);
+  }
+  .camaras-circle:hover {
+    border: 8px solid rgb(52, 210, 147);
+  }
+  .vecinal-circle:hover {
+    border: 8px solid rgb(58, 176, 226);
+  }
+  .control-circle:hover {
+    border: 8px solid rgb(247, 216, 97);
+  }
+  .alarmas-circle:hover {
+    border: 8px solid rgb(233, 102, 86);
+  }
+  .covid-circle:hover {
+    border: 8px solid rgb(52, 210, 147);
+  }
+}
+
+/*--- Acerca de ---*/
+
+.contenedor-sobre-nosotros {
+  background: rgb(39, 39, 39);
+  padding: 60px 0;
+}
+.title-sobre-nosotros {
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+.sub-title-nosotros {
+  font-weight: 100;
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  margin: 10px auto;
+}
+.parrafo-nosotros {
+  font-weight: 100;
+  font-size: 17px;
+  color: rgb(133, 133, 133);
+  text-align: center;
+  margin-top: 15px;
+}
+.contenedor-tags {
+  padding: 15px 0;
+}
+.tags {
+  display: flex;
+
+  align-items: center;
+  margin: 15px 25px;
+}
+.circle-rojo {
+  border: 6px solid rgb(235, 68, 68);
+  border-radius: 50%;
+  padding: 20px 10px;
+  color: #fff;
+}
+.circle-verde {
+  border: 6px solid rgb(30, 158, 107);
+  border-radius: 50%;
+  padding: 20px 10px;
+  color: #fff;
+}
+.circle-azul {
+  border: 6px solid rgb(58, 176, 226);
+  border-radius: 50%;
+  padding: 20px 10px;
+  color: #fff;
+}
+.circle-yellow {
+  border: 6px solid rgb(247, 216, 97);
+  border-radius: 50%;
+  padding: 20px 10px;
+  color: #fff;
+}
+
+p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0 15px;
+}
+
+/*--- Responsive Acerda de---*/
+
+@media (min-width: 760px) {
+  .title-sobre-nosotros {
+    font-size: 38px;
+    margin: 20px 0;
+  }
+  .sub-title-nosotros {
+    font-weight: 100;
+    font-size: 28px;
+  }
+  .contenedor-tags {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  p {
+    margin: 5px;
+  }
+}
+
+/*--- Proyectos ---*/
+
+.proyectos {
+  width: 100%;
+  background-image: url("./imagenes/logo-sp-seguridad.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.contenedor-proyectos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 16px;
+  background: rgba(52, 218, 147, 0.9);
+}
+.title-proyectos {
+  font-size: 30px;
+  text-align: center;
+  padding: 10px 0;
+  color: rgb(255, 255, 255);
+}
+.sub-title {
+  font-size: 16px;
+  color: rgba(0, 0, 0);
+  margin-top: 15px;
+  text-align: center;
+}
+.parrafo-proyectos {
+  font-size: 16px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin: 15px;
+}
+.enlace-proyectos {
+  margin: 10px auto;
+  text-decoration: none;
+  color: rgb(235, 68, 68);
+  font-size: 20px;
+}
+.proyectos-title {
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  padding: 50px 0;
+  text-align: center;
+}
+.box-proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn-proyectos {
+  background: rgb(20, 161, 104);
+  padding: 15px 13px;
+  margin-bottom: 35px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*---Responsive Proyectos ---*/
+
+@media (min-width: 960px) {
+  .title-proyectos {
+    font-size: 55px;
+    text-align: center;
+    padding: 10px 0;
+    color: rgb(255, 255, 255);
+  }
+}
+
+/*--- Formulario ---*/
+
+.section-form {
+  background-image: url("./imagenes/logo-sp-seguridad.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.contenedor-form {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 24px 0;
+}
+.title-form {
+  padding: 0px 0px 30px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.lebel-input input {
+  width: 346px;
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  border: none;
+}
+textarea {
+  font-size: 16px;
+  padding: 15px;
+  min-width: 346px;
+  min-height: 250px;
+  border-radius: 4px;
+}
+.btn-enviar {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  padding: 20px 35px;
+  margin: 15px;
+  border: none;
+  background-color: rgb(233, 102, 86);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.btn-enviar:hover {
+  background-color: rgb(209, 64, 45);
+}
+
+@media (min-width: 960px) {
+  .title-form {
+    font-size: 39px;
+  }
+
+  .form {
+    margin: 0;
+    max-height: 610px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .lebel-input-textarea {
+    grid-row: 3;
+    grid-column: 1/3;
+
+    text-align: center;
+  }
+  textarea {
+    width: 900px;
+    max-width: 900px;
+    max-height: 200px;
+  }
+  .lebel-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+  }
+  .btn-enviar {
+    width: 40%;
+    padding: 20px 0;
+    margin-left: 225px;
+    grid-column: 2;
+    grid-row: 4;
+  }
+}
+/*--- Responsive Formulario ---*/
+
+@media (min-width: 1200px) {
+  .form {
+    height: 100vh;
+  }
+
+  textarea {
+    width: 1010px;
+    max-width: 1015px;
+    max-height: 200px;
+  }
+  .btn-enviar {
+    width: 40%;
+    padding: 20px 0;
+    margin-left: 225px;
+  }
+}
+/*---- Estilos footer ----*/
+
+.container-footer {
+  background-color: rgb(64, 64, 64);
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.informacion-footer {
+  width: 100%;
+  padding: 25px;
+  margin: 10px 0;
+  text-align: center;
+}
+.direccion-footer {
+  font-size: 16px;
+  color: rgb(147, 147, 147);
+  margin: 15px;
+}
+.correo-electronico {
+  font-size: 16px;
+  color: rgb(147, 147, 147);
+  text-decoration: none;
+}
+.telefono {
+  font-size: 16px;
+  color: rgb(147, 147, 147);
+  margin: 15px;
+}
+.redes-copy-footer {
+  width: 90%;
+  height: 141px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: rgb(23, 23, 23);
+}
+.icon-facebook {
+  font-size: 24px;
+  color: rgb(133, 133, 133);
+}
+.icon-instagram {
+  padding: 5px 15px;
+  font-size: 24px;
+  color: rgb(133, 133, 133);
+}
+.copy {
+  margin: 10px;
+  font-size: 16px;
+  color: rgb(133, 133, 133);
+}
+
+/* --- Responsive Footer ---*/
+
+@media (min-width: 960px) {
+  .container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .redes-copy-footer {
+    width: 30%;
+    height: 187px;
+    text-align: center;
+  }
+  .informacion-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .redes-copy-footer {
+    width: 30%;
+    height: 187px;
+    text-align: center;
+  }
+  .informacion-footer {
+    margin: 0 15px;
+  }
+}
