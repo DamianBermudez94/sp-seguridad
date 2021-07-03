@@ -1,18 +1,74 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
+}
+body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+
+/* --- Style KeyFrames ---*/
+
+.animacion {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.mostrarArriba {
+  animation: mostrarArriba 1s;
+}
+
+@keyframes mostrarArriba {
+  0% {
+    transform: translateY(80px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animacion-izquierda {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.mostrarIzquierda {
+  animation: mostrarIzquierda 1s;
+}
+@keyframes mostrarIzquierda {
+  0% {
+    transform: translateX(-120px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animacion-derecha {
+  opacity: 0;
+  transition: all 0.5s;
+}
+.mostrarDerecha {
+  animation: mostrarDerecha 1s;
+}
+@keyframes mostrarDerecha {
+  0% {
+    transform: translateX(110px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 .header {
   overflow: hidden;
 }
 /*--- Menu ---*/
 .contenedor-header {
+  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 10px;
+  margin: 0;
+  padding: 15px;
 }
 .img-title {
   width: 50px;
@@ -23,12 +79,14 @@
   font-size: 20px;
   border-radius: 4px;
   padding: 10px;
+  margin: 0;
+
   color: #fff;
   background-color: rgb(77, 77, 77);
 }
 .menu {
   position: absolute;
-  top: 75px;
+  top: 90px;
   left: -100%;
   width: 100%;
   height: calc(100vh - 60px);
@@ -68,12 +126,11 @@
   background: rgba(0, 0, 0, 0.4);
 }
 .welcome-title {
-  font-size: 45px;
+  font-size: 36px;
   text-align: center;
   font-weight: 700;
   color: #fff;
-  margin: 0 30px;
-  margin-bottom: 50px;
+  margin: 30px 0;
 }
 .btn-welcome {
   display: flex;
@@ -101,14 +158,18 @@
   transition: 0.3s;
 }
 @media (min-width: 960px) {
+  .contenedor-header {
+    width: 100%;
+    position: fixed;
+    background-color: ivory;
+  }
   .menu {
-    position: absolute;
-    top: 25px;
+    top: 20px;
     left: 30%;
     width: 70%;
     height: 30%;
     margin: 0 auto;
-    background-color: unset;
+    background-color: initial;
   }
   .menu-contenedor {
     width: 80%;
@@ -120,6 +181,7 @@
     float: right;
     font-size: 18px;
     margin: 0;
+    padding: 15px;
   }
   .menu-link {
     width: unset;
@@ -136,6 +198,10 @@
 
   .btn-menu {
     display: none;
+  }
+
+  .welcome-title {
+    font-size: 42px;
   }
   .btn-welcome {
     display: flex;
@@ -158,24 +224,25 @@
 
 .contenedor-servicios {
   margin: 30px auto;
+  overflow: auto;
 }
 
 .servicios {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 40px;
   text-align: center;
 }
 
 .servicios-title {
-  padding: 15px;
+  padding: 25px;
   font-size: 45px;
   text-align: center;
   color: rgb(64, 64, 64);
 }
 .img-servicios {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   border: 8px solid rgba(141, 141, 141, 0.281);
 }
@@ -234,6 +301,13 @@
 /* --- Responsive Servicios ---*/
 
 @media (min-width: 960px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 20px;
+    text-align: center;
+  }
   .img-servicios {
     width: 150px;
     height: 150px;
@@ -266,12 +340,14 @@
 
 .contenedor-sobre-nosotros {
   background: rgb(39, 39, 39);
-  padding: 60px 0;
+  padding: 30px;
 }
 .title-sobre-nosotros {
-  font-size: 32px;
+  font-size: 29px;
+  padding: 10px;
   color: #fff;
   text-align: center;
+  margin: auto;
 }
 .sub-title-nosotros {
   font-weight: 100;
@@ -281,11 +357,12 @@
   margin: 10px auto;
 }
 .parrafo-nosotros {
+  padding: 10px;
   font-weight: 100;
   font-size: 17px;
   color: rgb(133, 133, 133);
   text-align: center;
-  margin-top: 15px;
+  margin: 15px auto;
 }
 .contenedor-tags {
   padding: 15px 0;
@@ -294,7 +371,7 @@
   display: flex;
 
   align-items: center;
-  margin: 15px 25px;
+  margin: 10px 25px;
 }
 .circle-rojo {
   border: 6px solid rgb(235, 68, 68);
@@ -330,13 +407,17 @@ p {
 /*--- Responsive Acerda de---*/
 
 @media (min-width: 760px) {
+  .contenedor-sobre-nosotros {
+    padding: 50px;
+  }
+
   .title-sobre-nosotros {
     font-size: 38px;
     margin: 20px 0;
   }
   .sub-title-nosotros {
     font-weight: 100;
-    font-size: 28px;
+    font-size: 24px;
   }
   .contenedor-tags {
     margin: 0 auto;
@@ -369,7 +450,7 @@ p {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 16px;
+
   background: rgba(52, 218, 147, 0.9);
 }
 .title-proyectos {
@@ -388,7 +469,7 @@ p {
   font-size: 16px;
   color: rgb(255, 255, 255);
   text-align: center;
-  margin: 15px;
+  margin: 15px auto;
 }
 .enlace-proyectos {
   margin: 10px auto;
@@ -444,32 +525,49 @@ p {
   padding: 0px 0px 30px;
   text-align: center;
   color: rgb(255, 255, 255);
-  font-size: 26px;
+  font-size: 28px;
 }
 .form {
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-.lebel-input input {
-  width: 346px;
-  margin: 10px;
   padding: 15px;
+}
+.lebel-input,
+input {
+  width: 100%;
+  max-width: 320px;
+  padding: 15px 0;
+  margin: auto;
   border-radius: 5px;
+  outline: none;
   border: none;
 }
-textarea {
+input:focus {
+  border: 2px solid rgb(97, 241, 241);
+  background-color: #f0f8ff;
+}
+.textarea {
+  width: 100%;
   font-size: 16px;
   padding: 15px;
-  min-width: 346px;
+  max-width: 290px;
   min-height: 250px;
   border-radius: 4px;
+  outline: none;
+  border: none;
+}
+.textarea:focus {
+  border: 2px solid rgb(97, 241, 241);
+  background-color: #f0f8ff;
 }
 .btn-enviar {
+  width: 89%;
   font-size: 14px;
   color: rgb(255, 255, 255);
   padding: 20px 35px;
-  margin: 15px;
+  margin: 15px auto;
   border: none;
   background-color: rgb(233, 102, 86);
   border-radius: 4px;
@@ -492,15 +590,14 @@ textarea {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
   }
-  .lebel-input-textarea {
-    grid-row: 3;
-    grid-column: 1/3;
 
-    text-align: center;
-  }
-  textarea {
-    width: 900px;
-    max-width: 900px;
+  .textarea {
+    grid-column: 1 / span 2;
+    grid-row: 3;
+    padding: 5px;
+    margin: auto;
+
+    max-width: 770px;
     max-height: 200px;
   }
   .lebel-input {
@@ -519,14 +616,13 @@ textarea {
 }
 /*--- Responsive Formulario ---*/
 
-@media (min-width: 1200px) {
+@media (min-width: 1069px) {
   .form {
     height: 100vh;
   }
 
-  textarea {
-    width: 1010px;
-    max-width: 1015px;
+  .textarea {
+    max-width: 850px;
     max-height: 200px;
   }
   .btn-enviar {
@@ -535,38 +631,55 @@ textarea {
     margin-left: 225px;
   }
 }
+
+@media (min-width: 1200px) {
+  .form {
+    height: 100vh;
+  }
+
+  .textarea {
+    max-width: 970px;
+    max-height: 200px;
+  }
+}
+
 /*---- Estilos footer ----*/
 
 .container-footer {
   background-color: rgb(64, 64, 64);
-  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 .informacion-footer {
-  width: 100%;
-  padding: 25px;
-  margin: 10px 0;
+  margin: auto;
   text-align: center;
+  padding: 10px;
 }
 .direccion-footer {
   font-size: 16px;
   color: rgb(147, 147, 147);
-  margin: 15px;
+  margin: 15px auto;
+  padding: 10px;
 }
 .correo-electronico {
   font-size: 16px;
   color: rgb(147, 147, 147);
   text-decoration: none;
+  padding: 10px;
 }
 .telefono {
   font-size: 16px;
   color: rgb(147, 147, 147);
-  margin: 15px;
+  margin: 15px auto;
+  padding: 10px;
 }
 .redes-copy-footer {
-  width: 90%;
-  height: 141px;
-  text-align: center;
-  margin: 0 auto;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   padding: 50px;
   background-color: rgb(23, 23, 23);
 }
@@ -594,29 +707,19 @@ textarea {
     align-items: center;
   }
   .redes-copy-footer {
-    width: 30%;
-    height: 187px;
-    text-align: center;
+    width: 20%;
+    height: 120px;
   }
-  .informacion-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .redes {
+    transition: 0.5s;
   }
-}
+  .redes:hover {
+    color: rgb(209, 64, 45);
+  }
 
-@media (min-width: 1200px) {
-  .container-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .redes-copy-footer {
-    width: 30%;
-    height: 187px;
-    text-align: center;
-  }
   .informacion-footer {
-    margin: 0 15px;
+    width: 70%;
+    display: flex;
+    align-items: center;
   }
 }
