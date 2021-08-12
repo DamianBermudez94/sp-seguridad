@@ -15,7 +15,7 @@ body {
   transition: all 0.5s;
 }
 .mostrarArriba {
-  animation: mostrarArriba 2s;
+  animation: mostrarArriba 1s;
 }
 
 @keyframes mostrarArriba {
@@ -32,7 +32,7 @@ body {
   transition: all 0.5s;
 }
 .mostrarIzquierda {
-  animation: mostrarIzquierda 2s;
+  animation: mostrarIzquierda 1s;
 }
 @keyframes mostrarIzquierda {
   0% {
@@ -48,7 +48,7 @@ body {
   transition: all 0.5s;
 }
 .mostrarDerecha {
-  animation: mostrarDerecha 2s;
+  animation: mostrarDerecha 1s;
 }
 @keyframes mostrarDerecha {
   0% {
