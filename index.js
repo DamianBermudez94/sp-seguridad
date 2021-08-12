@@ -34,13 +34,6 @@ function animacionScroolIzquierda() {
         animacion[i].classList.add("mostrarArriba");
       }
     }
-
-    //let tamaÃ±oDePantalla = window.innerHeight / 1;
-
-    //if (posicionObj > tamaÃ±oDePantalla) {
-    //animacion.style.animation = "mover 2s ease-out";
-    //animacion.style.animation = "moverdos 2s ease-out";
-    //}
   });
 
   window.addEventListener("scroll", () => {
@@ -78,9 +71,60 @@ function animacionScroolIzquierda() {
   });
 }
 
+// animacion slider clientes
+
+function SliderClientes() {
+  // Animacion slider
+
+  const slider = document.querySelector("#slider");
+  let sliderSection = document.querySelectorAll(".slider-section");
+  let sliderSectionLast = sliderSection[sliderSection.length - 1];
+
+  slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+
+  function nextRight() {
+    let sliderSectionFirts = document.querySelectorAll(".slider-section")[0];
+
+    slider.style.marginLeft = "-200%";
+    slider.style.transition = "0.6s";
+    setTimeout(function () {
+      slider.style.transition = "0.6s";
+      slider.insertAdjacentElement("beforeend", sliderSectionFirts);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
+
+  /*function Prev() {
+    const btnRight = document.querySelector("#btn-right");
+    const btnLeft = document.querySelector("#btn-left");
+    let sliderSection = document.querySelectorAll(".slider-section");
+    let sliderSectionLast = sliderSection[sliderSection.length - 1];
+    slider.style.marginLeft = "0";
+    slider.style.transition = "all 0.6s";
+
+    setTimeout(function () {
+      slider.style.transition = "none";
+      slider.insertAdjacentElement("afterbegin", sliderSectionLast);
+      slider.style.marginLeft = "-100%";
+    }, 500);
+  }
+  btnLeft.addEventListener("click", function () {
+    Prev();
+  });
+
+  btnRight.addEventListener("click", function () {
+    nextRight();
+  });*/
+
+  setInterval(function () {
+    nextRight();
+  }, 5000);
+}
+
 //animacion de
 
 function main() {
+  SliderClientes();
   animacionScroolIzquierda();
   menu();
 }

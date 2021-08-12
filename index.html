@@ -8,103 +8,148 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;400&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="imagenes/logo-sp-seguridad.jpeg" type="image/x-icon">
-    <title>sp-seguridad</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400&family=Roboto:wght@100;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagenes/logo-sp-seguridad.jpeg" type="image/x-icon">
+    <title>SP-SEGURIDAD</title>
     <link rel="stylesheet" href="./estilos.css">
     <script async src="./index.js"></script>
 </head>
 <body>
     <header class="header">
-        <nav class=" contenedor-header">
+        <nav class="contenedor-header">
             <div class="contenedor-title">
-                <a href="#"><img src="./imagenes/logo-sp-seguridad.jpeg" class="img-title" alt=""></a>
+                <a href="#"><img src="../imagenes/logo-sp-seguridad.jpeg" class="img-title" alt=""></a>
             </div>
             <span class="btn-menu" id="btn-menu"><i class="fas fa-bars"></i></span>
             <div class="menu">
                 <ul class="menu-contenedor">
                     <li class="menu-link"><a href="#" class="link">Inicio</a></li>
-                    <li class="menu-link"><a href="#"  class="link">Sobre nosotros</a></li>
-                    <li class="menu-link"><a href="#"  class="link">Proyectos</a></li>
-                    <li class="menu-link"><a href="#"  class="link">Contactos</a></li>
+                    <li class="menu-link"><a href="#sobre-nosotros"  class="link">Sobre nosotros</a></li>
+                    <li class="menu-link"><a href="#servicios"  class="link">Servicios</a></li>
+                    <li class="menu-link"><a href="#proyectos"  class="link">Proyectos</a></li>
+                    <li class="menu-link"><a href="#contacto"  class="link">Contactos</a></li>
                 </ul>
             </div>
         </nav>
-        <div class="header-welcome">
-            <div class="welcome">
-                <h1 class="welcome-title">ESPECILISTAS EN SEGURIDAD</h1>
-                <div class="btn-welcome">
-                    <a class="btn-quienes-somos animacion-izquierda" href="#">QUIENES SOMOS</a>
-                    <a class="btn-cotizaciones animacion-derecha" href="#">COTIZACIONES</a>
-                </div>
-            </div>
-        </div>
     </header>
     <main>
-        <section class="section-servicios">
+        <section class="container-welcome sobre-nosotros">
+            <div class="welcome-container">
+                <img class="img-header" src="./imagenes/Portada WEB RESPONSIVE .png" alt="sp-seguridad">
+                <div class="welcome">
+                    <h1 class="welcome-title" >SP-SEGURIDAD</h1>
+                    <p class="welcome__sub-title  mostrarArriba">Ofrecemos una amplia variedad de servicios con las últimas tecnologías para brindarles soluciones acordes a los problemas actuales.</p>
+                    <div class="btn-welcome">
+                        <a class="btn-quienes-somos animacion-izquierda" href="#sobre-nosotros">QUIENES SOMOS</a>
+                        <a class="btn-cotizaciones animacion-derecha" href="#contacto">COTIZACIONES</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <a name="servicios"/>
+        <section class="section-servicios servicios">
+           
             <div class="contenedor-servicios">
-                <h2 class="servicios-title">Servicios</h2>
-                <div class="servicios">
-                    
-                    <div class="box-servicios-uno animacion-izquierda ">
-                        <img class="img-servicios municipio-circle" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
-                        <h3 class="servicios-parrafos">municipio seguro</h3>
-                       <hr class="municipio">
+                <h2 class="servicios-title">Seguridad electrónica</h2>
+                <div class="servicios-img">
+                    <div class="box-servicios__img">
+                        <img class="img-servicios" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
                     </div>
-                    <div class="box-servicios-dos animacion-izquierda ">
-                        <img class="img-servicios camaras-circle" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
-                        <h3 class="servicios-parrafos">camaras</h3>
-                        <hr class="camaras">
-                    </div>
-                    <div class="box-servicios-tres animacion-izquierda ">
-                        <img class="img-servicios vecinal-circle" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
-                        <h3 class="servicios-parrafos">alarma vecinal</h3>
-                        <hr class="vecinal">
-                    </div>
-                    <div class="box-servicios-cuatro animacion-derecha ">
-                        <img class="img-servicios control-circle" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
-                        <h3 class="servicios-parrafos" >control de acceso</h3>
-                        <hr class="control">
-                    </div>
-                    <div class="box-servicios-cinco animacion-derecha ">
-                        <img class="img-servicios alarmas-circle" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
-                        <h3 class="servicios-parrafos">alarmas</h3>
-                        <hr class="alarmas">
-                    </div>
-                    <div class="box-servicios-seis animacion-derecha ">
-                        <img class="img-servicios covid-circle" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
-                        <h3 class="servicios-parrafos" >coronavirus codiv-19</h3>
-                        <hr class="covid">
-                      
+                    <div class="box-servicios__img">
+                        <img class="img-servicios" src="./imagenes/logo-sp-seguridad.jpeg" alt="">
                     </div>
                 </div>  
-                    
+                <div class="servicios-tags_uno">
+                    <div class="container-tags_uno">
+                        <p class="parrafo-servicios">Brindamos asesoramiento eficaz y completo de acuerdo a las necesidades de cada cliente.</p>
+                        <h3 class="sub-title-servicios">Nuestros servicios de Seguridad Electrónica:</h3>
+                        <ul class="list-tags">
+                            <li>Sistemas de Alarmas.</li>
+                            <li>Totem de Seguridad Virtual.</li>
+                            <li>Detectores de incendios.</li>
+                            <li>Botones de pánico.</li>
+                            <li>Monitoreo online.</li>
+                            <li>Vigilancia electrónica perimetral.</li>
+                            <li>Instalación de Circuito Cerrado de Televisión, Barreras Infrarrojas.</li>
+                            <li>Control de Accesos automatizados, Sistemas Especiales.</li>
+                        </ul>
+                        <p class="parrafo-servicios" > Mediante relevamientos previos identificamos y desarrollamos la solución correcta para brindar un servicio eficiente para cada necesidad.</p>
+                    </div>
+                </div>
+                <div class="servicios-tags_dos">
+                    <div>
+                        <h3 class="sub-title-servicios" >Deteccion de intrusos:</h3>
+                        <ul class="list-tags">
+                            <li>Paneles de alarma</li>
+                            <li>Control de acceso</li>
+                            <li>Vigilancia Virtual 24 Hs.</li>
+                            <li>Detector de movimiento</li>
+                            <li>Detector de ruptura de cristales</li>
+                            <li>Sensores de apertura</li>
+                            <li>Botones de panico</li>
+                            <li>Barreras perimetrales</li>
+                            <li>Sensores exteriores antimascota</li>
+                            <li>Sistema de deteccion de incendios</li>
+                            <li>Sistemas de Alarmas.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="sub-title-servicios" >Sistemas de CCTV</h3>
+                        <ul class="list-tags">
+                            <li>Tecnología digital</li>
+                            <li>Cámaras IP, fijas, domo, ocultas, exteriores, interiores</li>
+                            <li>Sistemas de ilunminación IR y tecnologia LED</li>
+                            <li>Gabración de video DVR, NVR, NDVR</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="servicios-tags_dos">
+                    <div class="">
+                        <h3 class="sub-title-servicios">Servicios</h3>
+                        <ul class="list-tags">
+                            <li>Consultoría.</li>
+                            <li>Diseño y desarrollo.</li>
+                            <li>Instalación.</li>
+                            <li>Mantenimientos preventivos y correctivos.</li>
+                            <li>Soporte tecnico.</li>
+                        </ul>
+                        </div>
+                        <div>
+                            <h3 class="sub-title-servicios">Intercomunicación</h3>
+                            <ul class="list-tags">
+                                <li>Video porteros</li>
+                                <li>Intercomunicadores</li>
+                                <li>Central telefónica</li>
+                                <li>Central de monitoreo las 24 hs</li>
+                            </ul>
+                        </div>
+                </div>  
             </div>
-           
-         
-
+     
         </section>
         <!--<section class="proyectos">
             <h3 class="title-proyectos">¿tienes un proyecto?</h3>
             <a href="#">contacta con nosotros</a>
         </section>-->
+        <a name="proyectos"/>
         <section class="proyectos">
             <div class="contenedor-proyectos">
-                <h3 class="title-proyectos"> Proyectos de alcance y politicas públicas</h3>
-                <p class="sub-title">En SP SEGURIDAD contamos con equipos Técnicos necesarios para asesorar a Gobiernos y Municipios a lo largo de sus proyectos, fomentar las estrategias de Desarrollo Local más adecuadas para las demandas ciudadanas, ofreciendo soluciones integrales innovadoras, herramientas tecnológicas, acordes a los desafíos contemporáneos. Junto a SOFTGUARD, socio tecnológico, contamos con una gran variedad de Programas Innovadores, Instituciones Financieras y Bancarias, Condominios y Barrios Cerrados, Colegio y Universidades, Servicios Corporativos.</p>
-                <p class="parrafo-proyectos">“SP SEGURIDAD Y SOFTGUARD ponemos en manos del Estado herramientas en Tiempo Real. A través de la apps SMARTPANICS, pueden concentrar los TRES PILARES Salud, Seguridad y Gestión, todo en una sola mano, la del ciudadano y empoderarlo. BIG DATA propia, Mapas de Calor, trackeo en casos de catástrofes y pandemias, Botones Anti Pánicos, Tablero de Gestión. Contamos con todo lo necesario, para que sus recursos sean eficientes</p>
-                <a href="#" class="enlace-proyectos">Sebastian Pierini</a>
+                <h3 class="title-proyectos">Realizamos toda la gestión necesaria:</h3>
+                <p class="sub-title">INGENIERÍA / PROVISIÓN / INSTALACIÓN / MANTENIMIENTO.</p>
                 <div class="box-proyectos">
-                    <h3 class="proyectos-title animacion-derecha" >¿tienes un proyecto?</h3>
-                    <a class="btn-proyectos animacion-izquierda" href="#">contácta con nosotros</a>
+                    <a class="btn-proyectos animacion-derecha" href="#contacto">contácta con nosotros</a>
                 </div>
             </div>
-        
+        <!-- Generated by https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections -->
+        <div class="corte-seccion" style="height: 150px; overflow: hidden;" ><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-29.62,96.20 C149.99,150.00 349.20,-49.98 508.74,95.22 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: rgb(255, 255, 255)"></path></svg></div>
             
         </section>
+        <a name="sobre-nosotros"/>
         <section class="sobre-nosotros">
             <div class="contenedor-sobre-nosotros">
-                <h2 class="title-sobre-nosotros">sp seguridad es una empresa que desde 2010 busca innovación para las exigencias del cliente</h2>
+                <h3 class="title-sobre-nosotros">SP-SEGURIDAD es una empresa que desde 2010 busca innovación para las exigencias del cliente</h3>
                 <h4 class="sub-title-nosotros"> Nos dedicamos a la venta, instalación y distribución de sistemas de seguridad</h4>
                 <p class="parrafo-nosotros animacion-izquierda "> Somos mucho más que una empresa de alarmas, prestamos un servicio integtral de seguridad.Por nuestra efectividad, aseguramos los resultados deseados por el cliente.Trabajamos con la discreción y confianza.Realizamos proyectos personalizadosa cada cliente y aseguramos el cumplimiento de los plazos establecidos.Tratamos a cada cliente como si fuera el único</p>
                 <div class="contenedor-tags  animacion-derecha">
@@ -128,27 +173,85 @@
             </div>
           
         </section>
-  
-        <section class="section-form">
-        <div class="contenedor-form">
-            <h4 class="title-form">Contacta con nosotros</h4>
-            <form action="" class="form">
-                <label for="" class="lebel-input">
-                    <input type="text" placeholder=" Nombre...">
-                </label>
-                <label for="" class="lebel-input">
-                    <input type="email" placeholder=" Correo electronico...">
-                </label>
-                <label for="" class="lebel-input">
-                    <input type="tel" placeholder=" Numero de telefono...">
-                </label>
-                <label for="" class="lebel-input">
-                    <input type="text" placeholder=" Asunto...">
-                </label>
-               <textarea  class="textarea" name="" placeholder="Mensaje..."></textarea>
-                <button class="btn-enviar">Enviar mensaje</button>
-            </form>
-        </div>
+        <!--Seccion slider clientes-->
+        <section>
+            <div class="flexslider">
+                <p class="title-slider">Clientes</p>
+                <div class="slides" id="slider">
+                    <div class="slider-section">
+                        <img class="slider-img" src="imagenes/hikvision.png" alt="">
+                    </div>
+                    <div class="slider-section">
+                        <img class="slider-img" src="imagenes/risco.png" alt="">
+                    </div>
+                    <div class="slider-section">
+                        <img class="slider-img" src="imagenes/seagate.jpg" alt="">
+                    </div>
+                    <div class="slider-section">
+                        <img class="slider-img " src="imagenes/donna emilia.jfif" alt="">
+                    </div>
+                    <div class="slider-section">
+                        <img class="slider-img" src="imagenes/dulcisimo.jpg" alt="">
+                    </div>
+                    <div class="slider-section">
+                        <img class="slider-img" src="imagenes/tino bebidas.png" alt="">
+                    </div>
+                    <div class="slider-section">
+                        <img class="slider-img" src="imagenes/lobosplast.jfif" alt="">
+                    </div>
+                    <div class="slider-section">
+                        <img class="slider-img" src="imagenes/anviz.png" alt="">
+                    </div>
+                </div>
+                <!--
+                    <span class="btn-slider slider_btn-right" id="btn-right"><i class="fas fa-chevron-right"></i></i></span>
+                    <span class="btn-slider slider_btn-left" id="btn-left"><i class="fas fa-chevron-left"></i></span>
+                -->
+                
+            </div>
+        </section>
+        <section class="seccion-icon_img">
+            <h3 class="title-icon_img">Servicios</h3>
+            <div class="container-icon_img">
+                <div class="container-box_img">
+                    <a href="#"><img class="img-icon" src="imagenes/camara-de-video-de-vigilancia.png" alt=""></a>
+                    <p class="text-icon_img">Seguridad Electrónica</p>
+                </div>
+                <div class="container-box_img">
+                    <a href="#"><img class="img-icon"  src="imagenes/eye.png" alt=""></a>
+                    <p class="text-icon_img">Seguridad Física</p>
+                </div>
+                <div class="container-box_img">
+                    <a href="#"><img class="img-icon" src="imagenes/marcador-de-posicion-de-mapa.png" alt=""></a>
+                    <p class="text-icon_img">Estudios de seguridad</p>
+                </div>
+            </div>
+        </section>
+        <a name="contacto"/>
+        <section class="section-form contacto">
+          
+            <div class="contenedor-form">
+                <div class="container-form_text">
+                    <h4 class="title-form">Contacta con nosotros</h4>
+                </div>
+                
+                <form action="" class="form">
+                    <label for="" class="label-input">
+                        <input type="text" placeholder=" Nombre..." required>
+                    </label>
+                    <label for="" class="label-input">
+                        <input type="email" placeholder=" Correo electronico..." required>
+                    </label>
+                    <label for="" class="label-input">
+                        <input type="tel" placeholder=" Numero de telefono..." required>
+                    </label>
+                    <label for="" class="label-input">
+                        <input type="text" placeholder=" Asunto..." required>
+                    </label>
+                <textarea  class="textarea" name="" placeholder="Mensaje..." required></textarea>
+                    <button class="btn-enviar mostrarArriba">Enviar mensaje</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footer">

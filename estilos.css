@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -14,12 +15,12 @@ body {
   transition: all 0.5s;
 }
 .mostrarArriba {
-  animation: mostrarArriba 1s;
+  animation: mostrarArriba 2s;
 }
 
 @keyframes mostrarArriba {
   0% {
-    transform: translateY(80px);
+    transform: translateY(90px);
   }
   100% {
     transform: translateY(0);
@@ -31,7 +32,7 @@ body {
   transition: all 0.5s;
 }
 .mostrarIzquierda {
-  animation: mostrarIzquierda 1s;
+  animation: mostrarIzquierda 2s;
 }
 @keyframes mostrarIzquierda {
   0% {
@@ -47,7 +48,7 @@ body {
   transition: all 0.5s;
 }
 .mostrarDerecha {
-  animation: mostrarDerecha 1s;
+  animation: mostrarDerecha 2s;
 }
 @keyframes mostrarDerecha {
   0% {
@@ -59,16 +60,19 @@ body {
 }
 
 .header {
-  overflow: hidden;
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  background-color: #ffffff;
+  z-index: 1;
 }
 /*--- Menu ---*/
 .contenedor-header {
-  height: 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 15px;
+  padding: 20px;
 }
 .img-title {
   width: 50px;
@@ -76,9 +80,9 @@ body {
   margin: 0 15px;
 }
 .btn-menu {
-  font-size: 20px;
+  font-size: 25px;
   border-radius: 4px;
-  padding: 10px;
+  padding: 20px;
   margin: 0;
 
   color: #fff;
@@ -90,47 +94,62 @@ body {
   left: -100%;
   width: 100%;
   height: calc(100vh - 60px);
-  background-color: rgba(20, 161, 104, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 .menu-contenedor {
-  margin: auto 10px;
   flex-direction: column;
-  font-size: 18px;
 }
 .menu-link {
-  width: 100%;
-  margin: 20px auto;
+  margin: 20px 0;
+  padding: 5px;
   color: rgb(255, 255, 255);
   border-bottom: 2px solid;
+  font-size: 19px;
+  font-family: "Montserrat", sans-serif;
 }
 .link {
   text-decoration: none;
   color: rgb(255, 255, 255);
 }
+.container-welcome {
+  position: relative;
+  top: 90px;
+  overflow: hidden;
+}
 
-.header-welcome {
-  height: 100vh;
+.img-header {
+  height: 640px;
   width: 100%;
-  background-image: url("./imagenes/logo-sp-seguridad.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  object-fit: cover;
+  background: rgb(0, 0, 0);
 }
 .welcome {
-  width: 100%;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 .welcome-title {
   font-size: 36px;
   text-align: center;
-  font-weight: 700;
   color: #fff;
-  margin: 30px 0;
+  margin: 10px 0;
+  padding: 5px;
+  font-family: "Roboto";
+  font-weight: 700;
+}
+.welcome__sub-title {
+  font-size: 22px;
+  text-align: center;
+  color: #fff;
+  padding: 5px;
+  font-family: "Montserrat", sans-serif;
 }
 .btn-welcome {
   display: flex;
@@ -139,29 +158,31 @@ body {
 }
 .btn-quienes-somos {
   text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 400;
   color: #fff;
-  border-radius: 4px;
+  border-radius: 15px;
   font-size: 19px;
-  background-color: rgb(233, 102, 86);
+  border: 1px solid #fff;
   padding: 10px 10px;
   margin: 15px 0;
   transition: 0.3s;
 }
 .btn-cotizaciones {
   font-size: 19px;
+  font-family: "Poppins";
   text-decoration: none;
   color: #fff;
   padding: 10px 10px;
   text-align: center;
-  background-color: rgb(30, 158, 107);
-  border-radius: 4px;
+  border: 1px solid #fff;
+  border-radius: 15px;
   transition: 0.3s;
 }
 @media (min-width: 960px) {
   .contenedor-header {
-    width: 100%;
-    position: fixed;
-    background-color: ivory;
+    height: 100px;
+    background-color: transparent;
   }
   .menu {
     top: 20px;
@@ -172,8 +193,6 @@ body {
     background-color: initial;
   }
   .menu-contenedor {
-    width: 80%;
-    height: 10%;
     flex-direction: unset;
     display: flex;
     align-items: center;
@@ -181,31 +200,49 @@ body {
     float: right;
     font-size: 18px;
     margin: 0;
-    padding: 15px;
+    padding: 20px;
   }
   .menu-link {
     width: unset;
     margin: auto 10px;
-    overflow: auto;
-    transition: all 0.6s;
+    transition: 0.8s;
   }
   .menu-link:hover {
-    border-bottom: 2px solid rgb(45, 80, 133);
+    border-bottom: 2px solid rgb(0, 10, 100);
   }
   .link {
-    color: rgb(45, 80, 133);
+    color: rgb(0, 1, 88);
+    transition: 0.5s;
   }
 
   .btn-menu {
     display: none;
   }
+  .container-welcome {
+    background-image: url("./imagenes/Portada\ WEB\ PC\ .png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
 
+  .welcome {
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 2, 107, 0.712);
+    align-items: flex-start;
+  }
   .welcome-title {
-    font-size: 42px;
+    font-size: 38px;
+    padding: 20px;
+  }
+  .welcome__sub-title {
+    font-size: 22px;
+    text-align: left;
+    padding: 20px;
   }
   .btn-welcome {
-    display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
     flex-direction: row;
   }
@@ -213,146 +250,137 @@ body {
     margin: 15px;
   }
   .btn-quienes-somos:hover {
-    background-color: rgb(209, 64, 45);
+    background-color: rgba(255, 255, 255);
+    color: rgb(19, 29, 116);
   }
   .btn-cotizaciones:hover {
-    background-color: rgb(14, 116, 75);
+    background-color: rgb(255, 255, 255);
+    color: rgb(19, 29, 116);
+  }
+}
+@media (min-width: 1024px) {
+  .welcome-title {
+    font-size: 42px;
+    margin-right: 800px;
+  }
+
+  .welcome__sub-title {
+    width: 50%;
+    padding: 10px;
+    margin-right: 450px;
+  }
+  .btn-welcome {
+    margin-right: 750px;
+    padding: 20px;
   }
 }
 
 /*---Servicios----*/
 
-.contenedor-servicios {
-  margin: 30px auto;
-  overflow: auto;
+.section-servicios {
 }
-
-.servicios {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 40px;
-  text-align: center;
+.contenedor-servicios {
+  margin-top: 50px;
+  padding: 20px;
+  overflow: hidden;
 }
 
 .servicios-title {
-  padding: 25px;
-  font-size: 45px;
+  width: 100%;
+  padding: 20px;
+  font-size: 30px;
   text-align: center;
   color: rgb(64, 64, 64);
 }
 .img-servicios {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 8px solid rgba(141, 141, 141, 0.281);
+  margin-top: 30px;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
-.servicios-parrafos {
-  text-align: center;
-  font-weight: bold;
-  font-size: 19px;
-  font-family: "Lato", sans-serif;
-  color: rgb(64, 64, 64);
-  padding: 5px;
+.box-servicios__img {
+  display: flex;
+  justify-content: center;
 }
-
-.municipio {
-  background-color: rgb(233, 102, 86);
-  max-width: 35%;
-  border: none;
-  height: 4px;
-  margin: 0 auto;
+.sub-title-servicios {
+  font-size: 24px;
+  padding: 10px 0;
 }
-.camaras {
-  background-color: rgb(52, 210, 147);
-  max-width: 30%;
-  height: 4px;
-  border: none;
-  margin: 0 auto;
+.parrafo-servicios {
+  color: rgb(0, 0, 0);
+  margin: 10px;
+  font-size: 22px;
 }
-.vecinal {
-  background-color: rgb(58, 176, 226);
-  width: 29%;
-  height: 4px;
-  border: none;
-  margin: 0 auto;
+.servicios-tags {
+  padding: 20px;
 }
-.control {
-  background-color: rgb(247, 216, 97);
-  max-width: 30%;
-  height: 4px;
-  border: none;
-  margin: 0 auto;
-}
-.alarmas {
-  background-color: rgb(233, 102, 86);
-  max-width: 20%;
-  height: 4px;
-  border: none;
-  margin: 0 auto;
-}
-.covid {
-  background-color: rgb(52, 210, 147);
-  max-width: 40%;
-  height: 4px;
-  border: none;
-  margin: 0 auto;
+.list-tags {
+  padding: 25px;
+  font-size: 20px;
 }
 
 /* --- Responsive Servicios ---*/
 
 @media (min-width: 960px) {
-  .servicios {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-    text-align: center;
+  .section-servicios {
+    padding: 20px;
+  }
+  .servicios-title {
+    font-size: 45px;
+  }
+  .servicios-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+  }
+  .box-servicios__img {
+    margin: 50px;
   }
   .img-servicios {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 8px solid rgba(141, 141, 141, 0.281);
-    cursor: pointer;
-    transition: 0.3s;
+    width: 400px;
+    height: 400px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.452);
   }
-  .municipio-circle:hover {
-    border: 8px solid rgb(233, 102, 86);
+  .servicios-tags_uno {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+
+    gap: 20px;
   }
-  .camaras-circle:hover {
-    border: 8px solid rgb(52, 210, 147);
+  .container-tags_uno,
+  .parrafo-servicios {
+    grid-column: 1 / span 2;
+    margin: 0;
   }
-  .vecinal-circle:hover {
-    border: 8px solid rgb(58, 176, 226);
-  }
-  .control-circle:hover {
-    border: 8px solid rgb(247, 216, 97);
-  }
-  .alarmas-circle:hover {
-    border: 8px solid rgb(233, 102, 86);
-  }
-  .covid-circle:hover {
-    border: 8px solid rgb(52, 210, 147);
+  .servicios-tags_dos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    gap: 20px;
   }
 }
 
 /*--- Acerca de ---*/
 
 .contenedor-sobre-nosotros {
-  background: rgb(39, 39, 39);
   padding: 30px;
+  background-color: rgb(255, 255, 255);
 }
 .title-sobre-nosotros {
   font-size: 29px;
   padding: 10px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-align: center;
   margin: auto;
 }
 .sub-title-nosotros {
   font-weight: 100;
   font-size: 18px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   text-align: center;
   margin: 10px auto;
 }
@@ -360,7 +388,7 @@ body {
   padding: 10px;
   font-weight: 100;
   font-size: 17px;
-  color: rgb(133, 133, 133);
+  color: rgb(0, 0, 0);
   text-align: center;
   margin: 15px auto;
 }
@@ -377,29 +405,29 @@ body {
   border: 6px solid rgb(235, 68, 68);
   border-radius: 50%;
   padding: 20px 10px;
-  color: #fff;
+  color: rgb(71, 67, 67);
 }
 .circle-verde {
   border: 6px solid rgb(30, 158, 107);
   border-radius: 50%;
   padding: 20px 10px;
-  color: #fff;
+  color: rgb(71, 67, 67);
 }
 .circle-azul {
   border: 6px solid rgb(58, 176, 226);
   border-radius: 50%;
   padding: 20px 10px;
-  color: #fff;
+  color: rgb(71, 67, 67);
 }
 .circle-yellow {
   border: 6px solid rgb(247, 216, 97);
   border-radius: 50%;
   padding: 20px 10px;
-  color: #fff;
+  color: rgb(71, 67, 67);
 }
 
 p {
-  color: #fff;
+  color: rgb(71, 67, 67);
   font-size: 18px;
   margin: 0 15px;
 }
@@ -436,22 +464,31 @@ p {
 }
 
 /*--- Proyectos ---*/
+.corte-seccion {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  border-bottom: rgb(255, 255, 255);
+}
 
 .proyectos {
-  width: 100%;
-  background-image: url("./imagenes/logo-sp-seguridad.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  overflow: hidden;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 255, 1) 35%,
+    rgba(243, 244, 250, 0.00043767507002800965) 100%
+  );
 }
+
 .contenedor-proyectos {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
-
-  background: rgba(52, 218, 147, 0.9);
+  padding: 20px;
 }
 .title-proyectos {
   font-size: 30px;
@@ -460,42 +497,31 @@ p {
   color: rgb(255, 255, 255);
 }
 .sub-title {
-  font-size: 16px;
-  color: rgba(0, 0, 0);
-  margin-top: 15px;
-  text-align: center;
-}
-.parrafo-proyectos {
-  font-size: 16px;
+  width: 100%;
+  font-size: 22px;
   color: rgb(255, 255, 255);
+  font-family: "Montserrat", sans-serif;
   text-align: center;
-  margin: 15px auto;
+  padding: 20px;
 }
-.enlace-proyectos {
-  margin: 10px auto;
-  text-decoration: none;
-  color: rgb(235, 68, 68);
-  font-size: 20px;
-}
-.proyectos-title {
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-  padding: 50px 0;
-  text-align: center;
-}
+
 .box-proyectos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  padding: 20px;
 }
 .btn-proyectos {
-  background: rgb(20, 161, 104);
+  background-color: rgb(255, 255, 255);
   padding: 15px 13px;
   margin-bottom: 35px;
   border-radius: 5px;
   text-decoration: none;
-  color: #fff;
+  color: rgb(4, 0, 255);
+  transition: 0.3s;
+}
+.btn-proyectos:hover {
+  background-color: rgb(15, 0, 99);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #f0f8ff;
 }
 
 /*---Responsive Proyectos ---*/
@@ -503,46 +529,168 @@ p {
 @media (min-width: 960px) {
   .title-proyectos {
     font-size: 55px;
+
+    padding: 20px 0;
+  }
+}
+/*--- Seccion slider clientes ---*/
+.flexslider {
+  padding: 20px 0;
+  width: 100%;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f8ff;
+}
+.title-slider {
+  text-align: center;
+  padding: 20px;
+  color: #000;
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.slides {
+  display: flex;
+  width: 800%;
+  height: 800px;
+  margin-left: -100%;
+  position: relative;
+}
+
+.slider-section {
+  width: 100%;
+  display: flex;
+}
+
+.slider-img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+}
+/*
+.btn-slider {
+  display: none;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 35px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.btn-slider:hover {
+  color: #f5f230;
+}
+.slider_btn-right {
+  right: 100px;
+}
+.slider_btn-left {
+  left: 100px;
+}*/
+@media (min-width: 960px) {
+  .slides {
+    width: 200%;
+    height: 200px;
+  }
+  .title-slider {
+    font-size: 38px;
+    margin: 20px 0;
     text-align: center;
-    padding: 10px 0;
-    color: rgb(255, 255, 255);
+  }
+}
+
+/*--- Seccion img-icon*/
+
+.container-icon_img {
+  padding: 10px;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.title-icon_img {
+  font-size: 35px;
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin-top: 15px;
+}
+.img-icon {
+  margin: auto;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 2px solid #000;
+}
+.text-icon_img {
+  margin-top: 10px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+}
+/*--- Responsive img-servicios --*/
+@media (min-width: 960px) {
+  .container-icon_img {
+    height: 300px;
+    justify-content: center;
+    flex-direction: row;
+    padding: 20px;
+  }
+  .container-box_img {
+    padding: 50px;
   }
 }
 
 /*--- Formulario ---*/
 
 .section-form {
-  background-image: url("./imagenes/logo-sp-seguridad.jpeg");
+  width: 100%;
+  background-image: url("./imagenes/Portada\ WEB\ RESPONSIVE\ .png");
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 .contenedor-form {
-  background-color: rgba(0, 0, 0, 0.5);
   padding: 24px 0;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .title-form {
-  padding: 0px 0px 30px;
+  padding: 30px;
   text-align: center;
   color: rgb(255, 255, 255);
   font-size: 28px;
 }
+
 .form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 15px;
+  padding: 10px;
 }
-.lebel-input,
+.label-input {
+  margin: 0;
+  font-size: 24px;
+}
+.label-input,
 input {
   width: 100%;
   max-width: 320px;
-  padding: 15px 0;
+  padding: 10px;
   margin: auto;
   border-radius: 5px;
   outline: none;
+  font-size: 16px;
   border: none;
+  font-family: "Montserrat", sans-serif;
 }
 input:focus {
   border: 2px solid rgb(97, 241, 241);
@@ -552,83 +700,90 @@ input:focus {
   width: 100%;
   font-size: 16px;
   padding: 15px;
-  max-width: 290px;
+  max-width: 295px;
   min-height: 250px;
   border-radius: 4px;
   outline: none;
   border: none;
+
+  font-family: "Montserrat", sans-serif;
 }
 .textarea:focus {
   border: 2px solid rgb(97, 241, 241);
   background-color: #f0f8ff;
 }
 .btn-enviar {
-  width: 89%;
-  font-size: 14px;
-  color: rgb(255, 255, 255);
+  width: 87%;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(4, 0, 255);
   padding: 20px 35px;
   margin: 15px auto;
-  border: none;
-  background-color: rgb(233, 102, 86);
+  border: 1px solid #fff;
   border-radius: 4px;
   cursor: pointer;
   transition: 0.5s;
 }
 .btn-enviar:hover {
-  background-color: rgb(209, 64, 45);
+  background-color: rgb(15, 0, 99);
+  color: rgb(255, 255, 255);
 }
 
 @media (min-width: 960px) {
   .title-form {
+    width: 100%;
     font-size: 39px;
   }
 
+  .contenedor-form {
+    padding: 20px;
+  }
   .form {
-    margin: 0;
+    width: 100%;
+    padding: 5px;
     max-height: 610px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
+    justify-content: space-around;
   }
 
   .textarea {
     grid-column: 1 / span 2;
-    grid-row: 3;
-    padding: 5px;
-    margin: auto;
-
-    max-width: 770px;
+    padding: 15px;
+    margin-left: 8px;
+    max-width: 780px;
     max-height: 200px;
   }
-  .lebel-input {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
+  .label-input,
+  input {
+    padding: 15px 0;
   }
   .btn-enviar {
-    width: 40%;
-    padding: 20px 0;
-    margin-left: 225px;
-    grid-column: 2;
-    grid-row: 4;
+    width: 100%;
+    font-size: 18px;
+    margin-left: 5px;
+    align-content: left;
   }
 }
 /*--- Responsive Formulario ---*/
 
 @media (min-width: 1069px) {
   .form {
-    height: 100vh;
+    padding: 5px;
   }
 
+  input {
+    width: 100%;
+    padding: 20px 50px;
+    margin: 5px;
+  }
   .textarea {
-    max-width: 850px;
+    width: 100%;
+    max-width: 9000px;
     max-height: 200px;
   }
   .btn-enviar {
-    width: 40%;
     padding: 20px 0;
-    margin-left: 225px;
+    justify-content: right;
   }
 }
 
@@ -638,7 +793,8 @@ input:focus {
   }
 
   .textarea {
-    max-width: 970px;
+    width: 100%;
+    max-width: 960px;
     max-height: 200px;
   }
 }
@@ -712,9 +868,10 @@ input:focus {
   }
   .redes {
     transition: 0.5s;
+    color: #fff;
   }
   .redes:hover {
-    color: rgb(209, 64, 45);
+    color: rgb(0, 1, 88);
   }
 
   .informacion-footer {
