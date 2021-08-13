@@ -19,7 +19,18 @@ function menu() {
     }
   });
 }
-
+function menuActive() {
+  let enlaces = document.querySelectorAll(".menu-contenedor li a");
+  console.log("Soy el enlace", enlaces);
+  enlaces.forEach((element) => {
+    element.addEventListener("click", (event) => {
+      enlaces.forEach((link) => {
+        link.classList.remove("active");
+      });
+      event.target.classList.add("active");
+    });
+  });
+}
 function animacionScroolIzquierda() {
   window.addEventListener("scroll", () => {
     let animacion = document.querySelectorAll(".animacion");
@@ -126,6 +137,7 @@ function SliderClientes() {
 function main() {
   SliderClientes();
   animacionScroolIzquierda();
+  menuActive();
   menu();
 }
 main();

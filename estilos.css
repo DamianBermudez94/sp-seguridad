@@ -6,6 +6,10 @@
 body {
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+  background-image: url("./imagenes/Portada\ WEB\ PC\ .png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
 }
 
 /* --- Style KeyFrames ---*/
@@ -90,7 +94,7 @@ body {
 }
 .menu {
   position: absolute;
-  top: 90px;
+  top: 110px;
   left: -100%;
   width: 100%;
   height: calc(100vh - 60px);
@@ -114,26 +118,16 @@ body {
 .container-welcome {
   position: relative;
   top: 90px;
-  overflow: hidden;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 520px;
 }
 
-.img-header {
-  height: 640px;
-  width: 100%;
-  object-fit: cover;
-  background: rgb(0, 0, 0);
-}
 .welcome {
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  overflow: hidden;
+  background-color: rgba(0, 2, 107, 0.712);
 }
 .welcome-title {
   font-size: 36px;
@@ -157,6 +151,7 @@ body {
   margin-top: 20px;
 }
 .btn-quienes-somos {
+  text-align: center;
   text-decoration: none;
   font-family: "Poppins";
   font-weight: 400;
@@ -205,28 +200,30 @@ body {
   .menu-link {
     width: unset;
     margin: auto 10px;
-    transition: 0.8s;
+    transition: 0.5s;
   }
-  .menu-link:hover {
+  .menu-link a.active {
     border-bottom: 2px solid rgb(0, 10, 100);
   }
+
   .link {
     color: rgb(0, 1, 88);
     transition: 0.5s;
+  }
+  .link:hover {
+    border-bottom: 2px solid rgb(0, 10, 100);
   }
 
   .btn-menu {
     display: none;
   }
   .container-welcome {
-    background-image: url("./imagenes/Portada\ WEB\ PC\ .png");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    height: 500px;
   }
 
   .welcome {
-    height: 100%;
+    height: 420px;
     margin: 0;
     padding: 20px;
     background-color: rgba(0, 2, 107, 0.712);
@@ -235,6 +232,7 @@ body {
   .welcome-title {
     font-size: 38px;
     padding: 20px;
+    text-align: left;
   }
   .welcome__sub-title {
     font-size: 22px;
@@ -242,6 +240,7 @@ body {
     padding: 20px;
   }
   .btn-welcome {
+    width: 100%;
     align-items: flex-start;
     padding: 20px;
     flex-direction: row;
@@ -259,9 +258,22 @@ body {
   }
 }
 @media (min-width: 1024px) {
+  .container-welcome {
+    width: 100%;
+    height: 600px;
+  }
+
+  .welcome {
+    height: 510px;
+    margin: 0;
+    padding: 20px;
+    background-color: rgba(0, 2, 107, 0.712);
+    align-items: flex-start;
+  }
   .welcome-title {
+    width: 100%;
     font-size: 42px;
-    margin-right: 800px;
+    margin-right: 400px;
   }
 
   .welcome__sub-title {
@@ -277,90 +289,80 @@ body {
 
 /*---Servicios----*/
 
-.section-servicios {
-}
-.contenedor-servicios {
-  margin-top: 50px;
+/*--- Seccion img-icon*/
+.seccion-icon_img {
   padding: 20px;
-  overflow: hidden;
+  background-color: #f0f8ff;
+  height: 1100px;
 }
+.container-icon_img {
+  padding: 10px;
 
-.servicios-title {
-  width: 100%;
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-  color: rgb(64, 64, 64);
-}
-.img-servicios {
-  margin-top: 30px;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-.box-servicios__img {
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
-.sub-title-servicios {
-  font-size: 24px;
-  padding: 10px 0;
-}
-.parrafo-servicios {
-  color: rgb(0, 0, 0);
-  margin: 10px;
-  font-size: 22px;
-}
-.servicios-tags {
+.container-box_img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   padding: 20px;
 }
-.list-tags {
-  padding: 25px;
-  font-size: 20px;
+.title-icon_img {
+  font-size: 35px;
+  text-align: center;
+  font-family: "Roboto";
+  font-weight: 700;
+  margin-top: 15px;
+  padding: 20px;
 }
-
-/* --- Responsive Servicios ---*/
-
+.img-icon {
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  border-bottom: 2px solid #000;
+}
+.text-icon_img {
+  margin-top: 10px;
+  font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+}
+/*--- Responsive img-servicios --*/
 @media (min-width: 960px) {
-  .section-servicios {
-    padding: 20px;
-  }
-  .servicios-title {
-    font-size: 45px;
-  }
-  .servicios-img {
+  .seccion-icon_img {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-  .box-servicios__img {
-    margin: 50px;
-  }
-  .img-servicios {
-    width: 400px;
-    height: 400px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.452);
-  }
-  .servicios-tags_uno {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     padding: 20px;
+    background-color: #f0f8ff;
+    height: 600px;
+  }
 
-    gap: 20px;
+  .title-icon_img {
+    font-size: 48px;
   }
-  .container-tags_uno,
-  .parrafo-servicios {
-    grid-column: 1 / span 2;
+  .container-icon_img {
+    margin: 0;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+  }
+  .container-box_img {
+    text-align: center;
     margin: 0;
   }
-  .servicios-tags_dos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 20px;
-    gap: 20px;
+  .item-b {
+    grid-column: 2 / span 3;
+    grid-row: 3 / span 1;
+  }
+  .item-c {
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
   }
 }
 
@@ -604,63 +606,14 @@ p {
   }
 }
 
-/*--- Seccion img-icon*/
-
-.container-icon_img {
-  padding: 10px;
-  height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.title-icon_img {
-  font-size: 35px;
-  text-align: center;
-  font-family: "Roboto";
-  font-weight: 700;
-  margin-top: 15px;
-}
-.img-icon {
-  margin: auto;
-  padding: 10px;
-  width: 100px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  border-bottom: 2px solid #000;
-}
-.text-icon_img {
-  margin-top: 10px;
-  font-size: 22px;
-  font-family: "Montserrat", sans-serif;
-}
-/*--- Responsive img-servicios --*/
-@media (min-width: 960px) {
-  .container-icon_img {
-    height: 300px;
-    justify-content: center;
-    flex-direction: row;
-    padding: 20px;
-  }
-  .container-box_img {
-    padding: 50px;
-  }
-}
-
 /*--- Formulario ---*/
 
 .section-form {
   width: 100%;
-  background-image: url("./imagenes/Portada\ WEB\ RESPONSIVE\ .png");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center;
 }
 .contenedor-form {
   padding: 24px 0;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 2, 107, 0.712);
 }
 .title-form {
   padding: 30px;
