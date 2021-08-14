@@ -11,7 +11,7 @@ body {
   background-size: cover;
   background-position: center;
 }
-.enviar-mail {
+#enviar-mail {
   opacity: 0;
 }
 /* --- Style KeyFrames ---*/
