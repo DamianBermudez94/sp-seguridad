@@ -11,7 +11,9 @@ body {
   background-size: cover;
   background-position: center;
 }
-
+.enviar-mail {
+  opacity: 0;
+}
 /* --- Style KeyFrames ---*/
 
 .animacion {
@@ -629,23 +631,20 @@ p {
   flex-direction: column;
   padding: 10px;
 }
-.label-input {
-  margin: 0;
-  font-size: 24px;
-}
-.label-input,
-input {
+
+.input {
   width: 100%;
+  min-width: 320px;
   max-width: 320px;
   padding: 10px;
-  margin: auto;
+  margin: 5px;
   border-radius: 5px;
   outline: none;
   font-size: 16px;
   border: none;
   font-family: "Montserrat", sans-serif;
 }
-input:focus {
+.input:focus {
   border: 2px solid rgb(97, 241, 241);
   background-color: #f0f8ff;
 }
@@ -653,12 +652,14 @@ input:focus {
   width: 100%;
   font-size: 16px;
   padding: 15px;
-  max-width: 295px;
+  min-width: 320px;
+  max-width: 320px;
+  max-height: 250px;
   min-height: 250px;
   border-radius: 4px;
   outline: none;
   border: none;
-
+  margin: 5px;
   font-family: "Montserrat", sans-serif;
 }
 .textarea:focus {
@@ -666,12 +667,14 @@ input:focus {
   background-color: #f0f8ff;
 }
 .btn-enviar {
-  width: 87%;
+  width: 100%;
+  min-width: 320px;
+  max-width: 320px;
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   color: rgb(4, 0, 255);
-  padding: 20px 35px;
-  margin: 15px auto;
+  padding: 15px;
+  margin: 15px;
   border: 1px solid #fff;
   border-radius: 4px;
   cursor: pointer;
@@ -692,23 +695,27 @@ input:focus {
     padding: 20px;
   }
   .form {
-    width: 100%;
+    width: 700px;
     padding: 5px;
+    margin: auto;
     max-height: 610px;
     display: grid;
-    justify-content: space-around;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .textarea {
     grid-column: 1 / span 2;
-    padding: 15px;
-    margin-left: 8px;
-    max-width: 780px;
+    padding: 10px;
+    margin: 5px;
+    max-width: 680px;
+    min-width: 680px;
+    min-height: 200px;
     max-height: 200px;
   }
-  .label-input,
-  input {
-    padding: 15px 0;
+
+  .input {
+    max-width: 325px;
   }
   .btn-enviar {
     width: 100%;
@@ -731,7 +738,9 @@ input:focus {
   }
   .textarea {
     width: 100%;
-    max-width: 9000px;
+    max-width: 750px;
+    min-width: 750px;
+    min-height: 200px;
     max-height: 200px;
   }
   .btn-enviar {
@@ -746,8 +755,9 @@ input:focus {
   }
 
   .textarea {
-    width: 100%;
-    max-width: 960px;
+    max-width: 680px;
+    min-width: 680px;
+    min-height: 200px;
     max-height: 200px;
   }
 }
