@@ -10,18 +10,20 @@ function menu() {
     if (activador) {
       menu.style.left = "0";
       menu.style.transition = "0.6s";
+
       activador = false;
     } else {
       activador = false;
       menu.style.left = "-100%";
       menu.style.transition = "0.6s";
+
       activador = true;
     }
   });
 }
+
 function menuActive() {
   let enlaces = document.querySelectorAll(".menu-contenedor li a");
-  console.log("Soy el enlace", enlaces);
   enlaces.forEach((element) => {
     element.addEventListener("click", (event) => {
       enlaces.forEach((link) => {
@@ -96,7 +98,7 @@ function SliderClientes() {
   function nextRight() {
     let sliderSectionFirts = document.querySelectorAll(".slider-section")[0];
 
-    slider.style.marginLeft = "-200%";
+    slider.style.marginLeft = "-100%";
     slider.style.transition = "0.6s";
     setTimeout(function () {
       slider.style.transition = "0.6s";
@@ -104,28 +106,6 @@ function SliderClientes() {
       slider.style.marginLeft = "-100%";
     }, 500);
   }
-
-  /*function Prev() {
-    const btnRight = document.querySelector("#btn-right");
-    const btnLeft = document.querySelector("#btn-left");
-    let sliderSection = document.querySelectorAll(".slider-section");
-    let sliderSectionLast = sliderSection[sliderSection.length - 1];
-    slider.style.marginLeft = "0";
-    slider.style.transition = "all 0.6s";
-
-    setTimeout(function () {
-      slider.style.transition = "none";
-      slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-      slider.style.marginLeft = "-100%";
-    }, 500);
-  }
-  btnLeft.addEventListener("click", function () {
-    Prev();
-  });
-
-  btnRight.addEventListener("click", function () {
-    nextRight();
-  });*/
 
   setInterval(function () {
     nextRight();
@@ -157,6 +137,7 @@ function main() {
   enviarFormulario();
   SliderClientes();
   animacionScroolIzquierda();
+
   menuActive();
   menu();
 }
