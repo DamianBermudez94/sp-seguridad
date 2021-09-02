@@ -1,5 +1,5 @@
 // Animacion del menu
-function menu() {
+/*function menu() {
   let btnMenu = document.querySelector("#btn-menu");
   let menu = document.querySelector(".menu");
 
@@ -20,19 +20,55 @@ function menu() {
       activador = true;
     }
   });
-}
 
-function menuActive() {
-  let enlaces = document.querySelectorAll(".menu-contenedor li a");
-  enlaces.forEach((element) => {
-    element.addEventListener("click", (event) => {
-      enlaces.forEach((link) => {
-        link.classList.remove("active");
+
+}*/
+function menu() {
+  const menu = document.querySelector(".menu");
+  const menuOpen = document.querySelector(".btn-menu_open");
+  const menuClose = document.querySelector(".btn-menu_close");
+
+  function toggleMenu() {
+    menu.classList.toggle("menu_opened");
+  }
+  menuOpen.addEventListener("click", toggleMenu);
+  menuClose.addEventListener("click", toggleMenu);
+
+  const menuLinks = document.querySelectorAll('.menu a[href^="#"]');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const id = entry.target.getAttribute("id");
+        console.log("asdsa", id);
+        const menuLink = document.querySelector(`.menu a[href="#${id}"]`);
+        console.log("sdafasdfdsa", menuLink);
+        if (entry.isIntersecting) {
+          document
+            .querySelector(".menu a.selected")
+            .classList.remove("selected");
+          console.log("soy la entry", entry);
+          menuLink.classList.add("selected");
+        }
       });
-      event.target.classList.add("active");
+    },
+    { rootMargin: "-30% 0px -70% 0px" }
+  );
+
+  menuLinks.forEach((menuLink) => {
+    menuLink.addEventListener("click", () => {
+      menu.classList.remove("menu_opened");
     });
+
+    const hash = menuLink.getAttribute("href");
+    console.log("soy el hash", hash);
+    const target = document.querySelector(hash);
+    if (target) {
+      observer.observe(target);
+    }
   });
 }
+
 function animacionScroolIzquierda() {
   window.addEventListener("scroll", () => {
     let animacion = document.querySelectorAll(".animacion");
@@ -69,18 +105,12 @@ function animacionScroolIzquierda() {
     for (var i = 0; i < animacionDerecha.length; i++) {
       let alturaAnimacion = animacionDerecha[i].offsetTop;
 
-      if (alturaAnimacion - 300 < scrollTopDyI) {
+      if (alturaAnimacion - 400 < scrollTopDyI) {
         animacionDerecha[i].style.opacity = 1;
 
         animacionDerecha[i].classList.add("mostrarDerecha");
       }
     }
-    //let tamaÃ±oDePantalla = window.innerHeight / 1;
-
-    //if (posicionObj > tamaÃ±oDePantalla) {
-    //animacion.style.animation = "mover 2s ease-out";
-    //animacion.style.animation = "moverdos 2s ease-out";
-    //}
   });
 }
 
@@ -137,8 +167,6 @@ function main() {
   enviarFormulario();
   SliderClientes();
   animacionScroolIzquierda();
-
-  menuActive();
   menu();
 }
 main();
